@@ -1,0 +1,1267 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none !important;
+  text-decoration: none !important;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif !important;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* ROOT */
+:root {
+  --font-sm: 16px;
+  --font-md: 18px;
+  --font-lg: 20px;
+  --font-xl: 40px;
+  --font-2xl: 48px;
+
+  /* ----- COLORS ------ */
+}
+
+/*--------- FONT-SIZE -------- */
+.font_sm {
+  font-size: var(--font-sm);
+}
+
+.font_md {
+  font-size: var(--font-md);
+}
+
+.font_lg {
+  font-size: var(--font-lg);
+}
+
+.font_xl {
+  font-size: var(--font-xl);
+}
+
+.font_2xl {
+  font-size: var(--font-2xl);
+}
+
+/*--------- FONT-WEIGHT -------- */
+.fw_semibold {
+  font-weight: 600;
+}
+
+.fw_bold {
+  font-weight: 700;
+}
+
+.fw_extrabold {
+  font-weight: 800;
+}
+
+@media (min-width: 1200px) and (max-width: 1599.98px) {
+  .custom_container {
+    max-width: 1140px !important;
+  }
+}
+
+@media (max-width: 1366.98px) {
+  :root {
+    --font-2xl: 44px;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  :root {
+    --font-2xl: 40px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  :root {
+    --font-2xl: 38px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  :root {
+    --font-xl: 34px;
+    --font-2xl: 36px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  :root {
+    --font-md: 16px;
+    --font-xl: 32px;
+    --font-2xl: 32px;
+  }
+}
+
+/* === COMMON CLASSES === */
+.d_none {
+  display: none;
+}
+
+.lh_143 {
+  line-height: 143.523%;
+}
+
+.lh_147 {
+  line-height: 147.023%;
+
+}
+
+.clr_gray {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.clr_red {
+  color: #e84932;
+}
+
+.trasition_02_ease_in {
+  transition: all 0.2s ease-in;
+}
+
+.bg_gray_dark {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.hadding_linear {
+  background: linear-gradient(89deg, #fcc47f 41.97%, #e84932 89.23%);
+}
+
+.text_bg_gradian {
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.transition_03 {
+  transition: 0.3s all ease-in-out;
+}
+
+.cursor_pointer {
+  cursor: pointer;
+}
+
+.slider_previous_next {
+  height: 52px !important;
+  width: 52px !important;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.slider_previous_next:hover {
+  background: linear-gradient(354deg, #e84932 12.65%, #fcc47f 87.85%), #e84932;
+  box-shadow: 10px 10px 40px rgba(232, 73, 50, 0.37);
+}
+
+/* === SCROLLBAR === */
+/* For WebKit browsers (like Safari) */
+::-webkit-scrollbar {
+  width: 8px;
+  /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background-color: black;
+  /* Set the background color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(354deg, #fff 12.65%, #0000ff 87.85%), #e84932;
+  /* Set the color of the scrollbar thumb */
+  border-radius: 6px;
+  height: 20px !important;
+  /* Set the border radius of the scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(354deg, #fff 12.65%, #0000ff 87.85%), #e84932;
+  /* Set the color of the scrollbar thumb on hover */
+}
+
+/* ==== BACK-TO-TOP-CSS-START ==== */
+#scroll svg {
+  height: 25px;
+  width: 22px;
+}
+
+#scroll {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  height: 45px !important;
+  width: 45px !important;
+  z-index: 40;
+  cursor: pointer;
+  font-size: var(--font_lg);
+  color: white;
+  padding: 10px 12px;
+  border-radius: 50% !important;
+  display: inline-block;
+  background: linear-gradient(#de897b 16.16%, #bc8c50 40.86%);
+  border: 1px solid transparent;
+  animation: moves 3s infinite;
+  transition: all 0.3s ease-in-out !important;
+}
+
+@keyframes moves {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#scroll:hover {
+  background: transparent;
+  border: 1px solid white;
+  box-shadow: 0px 0px 4px 4px rgba(255, 255, 255, 0.737);
+  color: white !important;
+}
+
+/* === DEFINE HEADER SECTION CODE === */
+.header_bg {
+  background-image: url("../images/webp/hero-bg.webp");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.nav_logo {
+  max-width: 195.131px;
+}
+
+.common_btn {
+  border: 1px solid transparent;
+  border-radius: 13px;
+  background: rgba(255, 255, 255, 0.12);
+  padding: 14.5px 29px;
+  transition: 0.3s all ease-in-out;
+}
+
+.common_btn:hover {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid white;
+}
+
+.header_border_bottom {
+  border: 1px solid rgba(255, 255, 255, 0.17);
+  max-width: 69%;
+  z-index: 1;
+}
+
+/* === DEIFNE HERO SECTION CODE === */
+.hero_heading {
+  line-height: 140.023%;
+  text-transform: capitalize;
+}
+
+.hero_into_linear_gradient {
+  font-weight: 800;
+  font-size: 20px;
+  display: inline-block;
+  color: #646464;
+}
+
+.hero_title_linear_gradient {
+  font-weight: 800;
+font-size: 30px;
+  display: inline-block;
+  background: linear-gradient(270deg, #e84932 24.85%, #fcc47f 98.91%);
+}
+
+.hero_linear_gradient {
+  font-size: 35px;
+  font-weight: 800;
+
+  display: inline-block;
+  background: linear-gradient(270deg, #e84932 24.85%, #fcc47f 98.91%);
+}
+.hero_para {
+  line-height: 142.023%;
+}
+
+.lh_142 {
+  line-height: 142.023%;
+}
+
+.hero_img {
+  position: absolute;
+  max-width: clamp(670px, 45vw, 680px);
+  right: -8%;
+  bottom: 4%;
+  z-index: 2;
+}
+
+.hero_man::after {
+  position: absolute;
+  content: " ";
+  width: 55%;
+  height: 50%;
+  top: 2%;
+  left: 56%;
+  transform: translateX(-50%);
+  z-index: 1;
+  background: url("../images/svg/hero-man-img-circle-combo.svg") no-repeat;
+}
+
+.hero_man::before {
+  position: absolute;
+  content: " ";
+  width: 200px;
+  min-height: 100vh;
+  bottom: 0px;
+  left: 49%;
+  z-index: -1;
+  transform: translateX(-50%);
+  background: linear-gradient(343deg, #e84932 43.32%, #fcc47f 100%), #e84932;
+}
+
+.hero_custom_height {
+  min-height: calc(100vh - 73px);
+}
+
+.z_index_10 {
+  z-index: 10;
+}
+
+.hero_logos_bg {
+  padding: 34px 0px 34px 60px;
+  position: absolute;
+  right: 0;
+  gap: 90px;
+}
+
+.hero_logo_parent {
+  min-height: 110px;
+}
+
+.hero_logos {
+  max-width: 153px;
+}
+
+.support_game_parent {
+  position: absolute;
+  bottom: 2%;
+  left: 0px;
+}
+
+.hero_ball {
+  top: -30%;
+}
+
+/*--------- PRODUCTS CSS -------- */
+.available_product_bg::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 200%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(25px);
+  border: 1px solid #212121;
+  border-radius: 0px 20px 20px 0px;
+  -webkit-backdrop-filter: blur(25px);
+}
+
+.available_product_bg::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 200%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.07);
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}
+
+.subheading_gradian {
+  background: linear-gradient(271deg, #e84932 16.16%, #fcc47f 40.86%);
+}
+
+.product_text_gradian {
+  background: linear-gradient(93deg, #fcc47f 33.56%, #e84932 63.63%);
+}
+
+.product_image {
+  max-width: 227px;
+}
+
+.third_card_image {
+  max-width: 220px;
+}
+
+.fourth_card_image {
+  max-width: 205px;
+}
+
+.product_border_top {
+  top: 50%;
+  transform: translateY(-50%);
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.product_border_left {
+  left: 33.33%;
+  border-left: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.product_border_left_position {
+  left: 66.66%;
+  border-left: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.product_card_data_image {
+  max-width: 134px;
+  height: 83px;
+  box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.44);
+}
+
+.top_right_product_card_data_image {
+  top: 40px;
+  right: 20px;
+}
+
+.top_left_product_card_data_image {
+  top: 40px;
+  left: 40px;
+}
+
+.product_box {
+  max-width: 292px;
+}
+
+.product_image_box {
+  width: 292px;
+  height: 164px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.purchase_button {
+  padding: 15px 0px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.purchase_button:hover {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid white;
+}
+
+.product_cards_bg {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(25px);
+}
+
+.product_blur_circle_position {
+  top: -30px;
+  left: 55px;
+}
+
+.product_blur_circle_position_2 {
+  bottom: 10%;
+  right: 55px;
+}
+
+.product_circle_bottom_right {
+  top: 120px;
+  right: -20%;
+}
+
+.product_border {
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.circle_slider_svg {
+  top: 0px;
+  left: 15px;
+  z-index: 20 !important;
+}
+
+.circle_product_card_right {
+  bottom: -25px;
+  right: 0;
+}
+
+/* -------------------product-css-end-------------- */
+/* === DISTINCT ADVANTAGES === */
+.advantages_cards {
+  border-radius: 20px;
+  border: 1px solid #212121;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(25px);
+  padding: 34px 46px 43px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.advantages_cards:hover {
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.advantages_linear {
+  background: linear-gradient(97deg, #fcc47f 11.59%, #e84932 55.55%);
+}
+
+.advantages_cards img {
+  fill: linear-gradient(354deg, #e84932 12.65%, #fcc47f 87.85%), #e84932;
+  filter: drop-shadow(5px 5px 20px rgba(232, 73, 50, 0.37));
+}
+
+.distinct_btn {
+  border: 1px solid transparent;
+  border-radius: 13px;
+  background: rgba(255, 255, 255, 0.12);
+  padding: 14.5px 41px;
+}
+
+.distinct_btn:hover {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid white;
+}
+
+.advantages_left_shade {
+  max-width: 400px;
+  top: 30%;
+}
+
+.advantages_right_ball {
+  top: 15%;
+}
+
+/* === TESTIMONIALS === */
+.circle_testimonials_position_top {
+  top: 20px;
+  right: 17%;
+}
+
+.circle_testimonials_position_bottom {
+  bottom: 10px;
+  left: 55%;
+}
+
+.testimonial_card {
+  border-radius: 20px;
+  border: 1px solid #212121;
+  padding: 34px 29px 32px 29px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(25px);
+}
+
+/* === VIDEO SNIPPETS === */
+.video_img {
+  border-radius: 37px;
+}
+
+.snippets_linear {
+  background: linear-gradient(270deg, #e84932 9.67%, #fcc47f 56%);
+}
+
+.popup_layer {
+  z-index: 53;
+}
+
+.popup_video {
+  width: 60%;
+  z-index: 55;
+}
+
+.popup_cross_icon {
+  top: -16%;
+}
+
+.popup_cross_icon svg:hover path {
+  stroke: gray;
+}
+
+.video_circle::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 400px;
+  height: 400px;
+  border-radius: 100%;
+  z-index: -1;
+  background: radial-gradient(50% 50% at 50% 50%,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0) 100%);
+}
+
+.silen_aim_image {
+  left: 75px;
+  position: absolute;
+  transform: translateY(-50%);
+}
+
+.snipets_arrows:hover circle {
+  fill-opacity: 1;
+}
+
+.snipets_arrows:hover path {
+  stroke: black;
+}
+
+.play_icon {
+  box-shadow: 10px 10px 40px 0px #e849325e;
+}
+
+/* === HOW IT WORK SLIDER === */
+.arrow_bg {
+  width: 52px;
+  height: 52px;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 100%;
+  transition: all 300ms ease-in-out;
+}
+
+.arrow_bg:hover {
+  background: linear-gradient(354deg, #e84932 12.65%, #fcc47f 87.85%);
+  filter: drop-shadow(10px 10px 40px rgba(232, 73, 50, 0.37));
+}
+
+.lh_142 {
+  line-height: 142.023%;
+}
+
+.how_work_card {
+  max-width: none !important;
+  padding: 45px 0px 56px 77px;
+  border-radius: 20px 0px 0px 20px !important;
+}
+
+.how_work_card::after {
+  content: "";
+  position: absolute;
+  right: 64%;
+  bottom: -40px;
+  width: 65.379px;
+  height: 65.379px;
+  border-radius: 100%;
+  transform: rotate(15deg);
+  background: radial-gradient(84.4% 84.4% at 27.78% 24.07%,
+      #646464 0%,
+      #292929 60.46%,
+      #0f0f0f 79.62%,
+      #1b1b1b 100%);
+  filter: blur(5px);
+  z-index: 1;
+}
+
+.how_work_card::before {
+  content: "";
+  position: absolute;
+  right: 205px;
+  top: -10px;
+  width: 31.379px;
+  height: 31.379px;
+  border-radius: 100%;
+  transform: rotate(15deg);
+  background: radial-gradient(84.4% 84.4% at 27.78% 24.07%,
+      #646464 0%,
+      #292929 60.46%,
+      #0f0f0f 79.62%,
+      #1b1b1b 100%);
+  filter: blur(5px);
+  z-index: 1;
+}
+
+.step_para {
+  max-width: 250px;
+}
+
+.arrow_line {
+  left: 65px;
+  width: calc(100% - 65px);
+}
+
+.z-n2 {
+  z-index: -2;
+}
+
+/* === FREQUENTLY ASKED QUESTIONS === */
+.faq_circle::after {
+  content: "";
+  width: 600px;
+  height: 600px;
+  position: absolute;
+  left: 0;
+  bottom: -180px;
+  border-radius: 100%;
+  background: radial-gradient(50% 50% at 50% 50%,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0) 100%);
+  z-index: -1;
+}
+
+.questions_linear {
+  background: linear-gradient(89deg, #fcc47f 41.97%, #e84932 89.23%);
+}
+
+.faq_circle::before {
+  content: "";
+  position: absolute;
+  right: -60px;
+  bottom: 0;
+  border-radius: 100%;
+  width: 121.192px;
+  height: 121.192px;
+  transform: rotate(15deg);
+  background: radial-gradient(84.4% 84.4% at 27.78% 24.07%,
+      #646464 0%,
+      #292929 60.46%,
+      #0f0f0f 79.62%,
+      #1b1b1b 100%);
+  filter: blur(5px);
+}
+
+.btn_connect_with {
+  padding: 16px 28px;
+  border-radius: 13px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid transparent;
+}
+
+.btn_connect_with:hover {
+  border: 1px solid white;
+  background: transparent;
+}
+
+.faq {
+  margin-right: 20px;
+}
+
+.faq .accordion-body {
+  padding: 0 20px 39px 0 !important;
+  color: #fff !important;
+  font-family: "Poppins", sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 142.023% !important;
+  background: transparent !important;
+}
+
+.faq .accordion-button:focus {
+  box-shadow: none !important;
+}
+
+.faq .accordion-button:hover {
+  border-radius: 10px !important;
+}
+
+.faq .accordion-item .accordion-button {
+  border-radius: 0 !important;
+  color: #fff !important;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  line-height: 142.023% !important;
+  background: transparent !important;
+  padding: 25px 25px 25px 0 !important;
+}
+
+.faq .accordion-item {
+  padding: 7px 0;
+  background: transparent !important;
+  margin-top: 11px !important;
+}
+
+.faq_item::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 200%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.04) !important;
+  border-radius: 0px 20px 20px 0px !important;
+  border-top: 1px solid #212121 !important;
+  border-right: 1px solid #212121 !important;
+  border-bottom: 1px solid #212121 !important;
+  backdrop-filter: blur(25px) !important;
+  z-index: -1;
+}
+
+.faq .accordion-button::after {
+  background-image: url(../images/svg/faq_arrow.svg) !important;
+  box-shadow: 10px 10px 40px rgba(232, 73, 50, 0.37) !important;
+  position: absolute !important;
+  right: -17px !important;
+  border-radius: 100%;
+  background-size: 100% 100%;
+  width: 35px !important;
+  height: 35px !important;
+}
+
+.faq .accordion-button:not(.collapsed) {
+  box-shadow: none !important;
+  padding-top: 35px !important;
+}
+
+.faq .accordion-button:not(.collapsed)::after {
+  transform: rotate(180deg) !important;
+}
+
+/* === READY TO START === */
+.bg_ready_start {
+  border-radius: 20px;
+  background: linear-gradient(300deg, #fcc47f 5.56%, #e84932 100%), #e84932;
+}
+
+.btn_purchase {
+  padding: 16px 29px;
+  border-radius: 13px;
+}
+
+.btn_purchase:hover {
+  color: black;
+}
+
+.ready_to_image {
+  width: 300px;
+  right: 48px;
+  position: absolute;
+}
+
+/* === FOOTER === */
+.footer_top_boder {
+  border-top: 1px solid rgba(255, 255, 255, 0.19);
+}
+
+.susano_link:hover {
+  color: white;
+}
+
+.footer_icons img:hover {
+  opacity: 0.5;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .product_border_left {
+    left: 50%;
+  }
+
+  .product_border_top {
+    top: 33.33%;
+  }
+
+  .product_border_top_middle {
+    top: 66.66%;
+    transform: translateY(-50%);
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+  }
+
+  .third_card_image {
+    max-width: 213px;
+  }
+
+  .fourth_card_image {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 1599.98px) {
+  .support_game_parent {
+    bottom: 0;
+  }
+}
+
+@media (max-width: 1399.98px) {
+  .how_work_card::before {
+    right: 85px;
+  }
+
+  .hero_logos_bg {
+    padding: 34px 10px 34px 56px;
+    gap: 80px;
+  }
+
+  .faq {
+    margin-right: 10px;
+  }
+
+  #scroll {
+    bottom: 60px;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .faq {
+    margin-right: 0;
+  }
+
+  .how_work_card {
+    padding: 40px 0px 40px 40px;
+  }
+
+  /* .arrow_line {
+    width: 75.21%;
+  } */
+
+  .hero_logos_bg {
+    padding: 32px 10px 32px 32px;
+    gap: 48px;
+  }
+
+  .hero_logos {
+    max-width: 120px;
+  }
+
+  .hero_img {
+    max-width: 52vw;
+    right: -2.8%;
+  }
+
+  .silen_aim_image {
+    left: 25px;
+  }
+
+  .play_icon img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .advantages_cards {
+    padding: 34px;
+  }
+
+  .hero_man::after {
+    top: 2.5%;
+    left: 53%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 1076.98px) {
+  .hero_man::after {
+    top: 2.5%;
+    left: 49%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 991.98px) {
+  .iframe_youtube {
+    height: 400px !important;
+  }
+
+  .available_product_bg::after {
+    display: none;
+  }
+
+  .how_work_card::before {
+    display: none;
+  }
+
+  .how_work_card::after {
+    right: 0;
+  }
+
+  .video_circle::before {
+    top: 0;
+    width: 170px;
+    height: 170px;
+  }
+
+  .hero_custom_height {
+    min-height: 100% !important;
+  }
+
+  .support_game_parent {
+    position: unset;
+  }
+
+  .hero_logos {
+    max-width: 95px;
+  }
+
+  .hero_logos_bg {
+    padding: 28px 24px;
+    gap: 20px;
+  }
+
+  .hero_logo_parent {
+    min-height: 90px;
+  }
+
+  .distinct_card_box {
+    max-width: 340px;
+  }
+
+  .popup_video {
+    width: 80%;
+  }
+
+  .video_img {
+    min-height: 294px;
+  }
+
+  .silen_aim_image {
+    position: sticky;
+    width: 260px;
+    margin: auto;
+    transform: translateY(-25px);
+  }
+
+  .ready_to_image {
+    position: sticky !important;
+    width: 100%;
+  }
+
+  .faq_circle::after {
+    width: 200px;
+    height: 200px;
+    left: 70%;
+    top: 0;
+  }
+
+  .faq_circle::before {
+    display: none;
+  }
+
+  .faq .accordion-item {
+    margin-top: 16px !important;
+  }
+
+  .faq .accordion-body {
+    padding: 0 20px 30px 8px !important;
+  }
+
+  .faq .accordion-item .accordion-button {
+    padding-left: 8px !important;
+    padding-right: 20px !important;
+  }
+
+  .faq .accordion-button::after {
+    right: -15px !important;
+  }
+
+  .advantages_cards {
+    padding: 34px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .faq .accordion-button::after {
+    width: 20px !important;
+    height: 20px !important;
+    right: -9px !important;
+  }
+
+  .fourth_card_image {
+    max-width: 220px;
+    height: 225px;
+  }
+
+  #scroll {
+    bottom: 30px;
+  }
+
+  .ready_to_image {
+    height: 310px;
+  }
+
+  .how_work_card {
+    padding: 46px 0px 46px 24px;
+  }
+
+  .hero_logos_bg {
+    position: unset;
+    gap: 0px;
+    border-radius: 20px;
+    padding: 28px 24px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    backdrop-filter: blur(25px);
+  }
+
+  .hero_logos {
+    max-width: 130px;
+  }
+
+  .advantages_cards {
+    padding: 24px 20px 28px;
+  }
+
+  .distinct_card_box {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .faq {
+    margin-right: 10px;
+  }
+
+  .support_game_parent {
+    transform: translateY(-30px);
+  }
+
+  .ready_to_image {
+    height: 261px;
+    object-fit: contain;
+    max-width: 241px;
+  }
+
+  .faq_circle::after {
+    left: 60%;
+  }
+
+  .video_circle::before {
+    right: -20px;
+  }
+
+  .popup_cross_icon {
+    top: -22%;
+  }
+
+  /* .arrow_line {
+    width: 80%;
+  } */
+
+  .nav_logo {
+    max-width: 165px !important;
+  }
+
+  .advantages_cards {
+    padding: 34px 34px 43px 34px;
+  }
+
+  .distinct_card_box {
+    max-width: 345px;
+  }
+
+  .advantages_right_ball {
+    top: 62%;
+  }
+
+  .advantages_left_ball {
+    top: 28%;
+  }
+
+  .play_icon img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .popup_video {
+    width: 99%;
+  }
+
+  .support_game_parent {
+    transform: translateY(-30px);
+  }
+}
+
+@media (max-width: 426px) {
+  .testimonial_slider {
+    padding: 0 8px;
+  }
+}
+
+@media (max-width: 375px) {
+  /* .arrow_line {
+    width: 77%;
+  } */
+}
+
+@media (min-width: 768px) {
+  .hero_logos_bg::after {
+    position: absolute;
+    content: " ";
+    width: 200%;
+    left: 0px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    backdrop-filter: blur(25px);
+    border-radius: 20px 0px 0px 20px;
+    z-index: -1;
+  }
+}
+
+@media (min-width: 1500px) {
+
+  /* .arrow_line {
+    width: 80.61%;
+  } */
+  .hero_img {
+
+    max-width: clamp(627px, 40vw, 450px);
+
+
+  }
+
+  .hero_man::after {
+    top: 5%;
+    left: 53.5%;
+  }
+
+  .hero_man::before {
+    left: 47.3%;
+
+  }
+}
+
+@media (min-width: 1600px) {
+  /* .arrow_line {
+    width: 85%;
+  } */
+
+  .hero_man::after {
+    top: 2.9%;
+    left: 55%;
+  }
+
+  .hero_img {
+
+    max-width: clamp(668px, 44vw, 500px);
+
+
+  }
+
+  .header_border_bottom {
+    max-width: 70%;
+  }
+}
+
+@media (min-width: 1900px) {
+  .hero_img {
+    max-width: clamp(400px, 40.27vw, 730px);
+    bottom: 2%;
+  }
+
+  .hero_man::after {
+    top: 5.5%;
+    left: 58%;
+  }
+
+  .header_border_bottom {
+
+    max-width: 67%;
+
+  }
+}
